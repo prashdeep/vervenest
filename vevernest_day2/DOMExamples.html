@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM examples</title>
+</head>
+<body>
+    Filter: <input type="text" 
+           name="key" 
+           id="key" 
+           placeholder="Enter search keyword">
+    <br/>       
+    Add Name:
+    <input type="text" 
+           name="name" 
+           id="name" 
+           placeholder="Enter name">
+    
+
+    
+    <div id="container">
+
+    </div>
+</body>
+<script>
+
+    let users=[
+        {name:'manoj', id:1},
+        {name:'suresh',  id:2},
+        {name:'vinay',  id:3},
+        {name:'kiran',  id:4},
+        {name:'hari',  id:5},
+        {name:'tushar',  id:6},
+        {name:'surendra',  id:7},
+        {name:'Manish',  id:8},
+        {name:'harish',  id:9},
+        {name:'vinod',  id:10}
+    ]
+    let container = document.querySelector('#container');
+    let input = document.querySelector("#key");
+    input.addEventListener("keyup", function(event){
+        filterList(event.target.value);
+    })
+    
+
+    let filterList = function(value){
+        let filteredList = users
+            .map(user => user.name)
+            .filter( name => name.startsWith(value));
+
+        appendNode(filteredList);
+    }
+
+    let appendNode = function(list){
+        container.innerHTML =
+        `
+        <ul> 
+         ${generateLi(list)}
+        </ul>
+        `
+    }
+
+    let generateLi = function(liItems){
+        return liItems
+        .map(liItem => `<li>${liItem.name} <span class='delete' id=${liItem.id} >X</span></li>`).join(' ')
+
+    }
+
+    let nameNode = document.querySelector("#name");
+    nameNode.addEventListener("change", function(event){
+        let username = event.target.value;
+        users.push({name:username, id:users.length + 1});
+        appendNode(users);
+        event.target.value='';
+    })
+    appendNode(users);
+    let itemIndexes = document.querySelectorAll('.delete');
+    itemIndexes.forEach(item => item.addEventListener('click', function(event){
+        console.log(event);
+        console.log(+event.target.id);
+        users.splice(+event.target.id, 1);
+        console.log(users);
+    }))
+
+</script>
+</html>

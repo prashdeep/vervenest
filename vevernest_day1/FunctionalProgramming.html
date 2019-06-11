@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    var sum = function (a, b){
+        return a + b;
+    }
+
+    var sub = function (a, b){
+        return a - b;
+    }
+
+    var calculate = function (fun, a, b){
+        return fun(a,b);
+    }
+
+   // console.log('The value is '+calculate(sum, 34, 45));
+
+   //function returning another function
+
+   var greet = function(firstName, lastName){
+      var message = function(greetStr){
+          return greetStr + firstName +
+           " "+lastName;
+      }
+      return message;
+   }
+
+
+</script>
+</html>

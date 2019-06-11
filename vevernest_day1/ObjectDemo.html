@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var user={
+        'first-name':"Manish",
+        'last-name':'Kumar',
+        'nick-name':'Manish',
+        age:22,
+        married:false,
+        hobbies:["running","swimming"],
+        address:{
+            city:"Bangalore",
+            state:"Karnataka",
+            zipCode: 577142
+        },
+        printFullName:function(){
+            return this['first-name']+ this['last-name'];
+        }
+    }
+    console.log("The name is "+user.name);
+    console.log("The name is "+user['name']);
+     user.printFullName();
+</script>
+</html>
