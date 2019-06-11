@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            display:    ;
+            border:1px solid #eee;
+            padding:10px;
+            background-color: tomato;
+            color:#ffffff;
+            cursor:pointer;
+            
+        }
+         body{
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+             font-size: 26px;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ol>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ol>
+        </nav>
+    </header>
+
+    <button id="hide">Show/Hide</button>
+    <h1>Heading</h1>
+    <h2>Sub Heading</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptas amet facere cupiditate vitae corrupti laboriosam illum cum fugiat repellat!
+    </p>
+    <aside>
+
+    </aside>
+    <main>
+        <div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ducimus nam quam unde deleniti amet omnis officia laborum delectus debitis!</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium consequuntur accusamus nesciunt quisquam aperiam assumenda animi, exercitationem earum mollitia quia provident dolorum saepe voluptatibus iusto aspernatur vel ea ut ducimus. Ab ad vitae incidunt fugiat expedita. Praesentium maiores modi tempore!</p>
+        </div>
+        <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque magnam ea error natus, obcaecati eum doloribus molestias aspernatur, temporibus hic sint vitae velit nostrum voluptatum facilis blanditiis ad numquam quis.</p>
+            <img src="https://images.unsplash.com/photo-1559657693-e816ff3bd9af?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60">
+            <img src="https://images.unsplash.com/photo-1559657693-e816ff3bd9af?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60">
+
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls autoplay="true"></video>
+        </div>
+        <div>
+            <article>
+                <section>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem itaque officiis nobis officia illum illo natus provident aut rerum nam?
+                    </p>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>Locate Us</li>
+            <li>Terms and conditions</li>
+        </ul>
+    </footer>
+    
+</body>
+<script>
+    document.querySelector('button').addEventListener('click',function(){
+        document.querySelectorAll('li').forEach(node => node.style.backgroundColor = "green");
+    })
+</script>
+</html>

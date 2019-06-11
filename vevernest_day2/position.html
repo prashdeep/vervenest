@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position</title>
+    <style>
+        div{
+            margin:0px;
+        }
+        #outer{
+            width:400px;
+            height: 400px;
+            background-color: red;
+            position:relative;
+            margin:0 auto;
+        }
+        #inner{
+            width:200px;
+            height:200px;
+            background-color: rgb(123,200,122, 0.4);
+            position: absolute;
+            border:1px solid black;
+            top:25%;
+            left:25%;
+            border-radius:50%;
+        }
+
+        #outer:hover{
+            width:600px;
+            height:600px;
+            transition: all 4s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="outer">
+        <div id="inner">
+
+        </div>
+    </div>
+
+    
+</body>
+<script>
+    let outer = document.querySelector("#outer");
+    outer.addEventListener('mouseover',function(){
+        this.style.backgroundColor = "yellow";
+    })
+   
+    outer.addEventListener('mouseleave',function(){
+        this.style.backgroundColor = "tomato";
+    })
+</script>
+</html>
